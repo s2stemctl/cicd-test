@@ -21,9 +21,9 @@ pipeline {
             steps {
                 echo 'Clonning Repository'
 
-                git url: 'http://192.168.1.91/mongmin/cicd_test.git',
+                git url: 'https://github.com/s2stemctl/cicd-test.git',
                     branch: 'master',
-                    credentialsId: 'jenkins_ID'
+                    credentialsId: 'gittest'
             }
 
             post {
@@ -140,7 +140,6 @@ pipeline {
 
             dir ('./server'){
                 sh '''
-                docker rm -f $(docker ps -aq)
                 docker run -p 80:80 -d server
                 '''
             }
