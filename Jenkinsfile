@@ -22,7 +22,7 @@ pipeline {
                 echo 'Clonning Repository'
 
                 git url: 'https://github.com/s2stemctl/cicd-test.git',
-                    branch: 'master',
+                    branch: 'main',
                     credentialsId: 'gittest'
             }
 
