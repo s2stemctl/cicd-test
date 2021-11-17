@@ -60,10 +60,7 @@ pipeline {
               // failed, record the test results and archive the jar file.
               success {
                   echo 'Successfully Cloned Repository'
-
-               
               }
-
               failure {
                   echo 'I failed :('
               }
