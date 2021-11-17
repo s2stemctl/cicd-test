@@ -66,7 +66,6 @@ pipeline {
 
               failure {
                   echo 'I failed :('
-
               }
           }
         }
@@ -141,10 +140,7 @@ pipeline {
 
           post {
             success {
-              mail  to: 'frontalnh@gmail.com',
-                    subject: "Deploy Success",
-                    body: "Successfully deployed!"
-                  
+              echo "Successfully deployed!"                  
             }
           }
         }
